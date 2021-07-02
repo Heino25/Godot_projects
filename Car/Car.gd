@@ -8,7 +8,8 @@ func _ready():
 	randomize()
 	var current_car = CAR_LIST[randi() % CAR_LIST.size()]
 	$"AnimatedSprite".animation = current_car
-	
+	car_speed = rand_range(220,280)
+
 	if position.x < 0:
 		direction = -1
 		$"AnimatedSprite".flip_h = true
