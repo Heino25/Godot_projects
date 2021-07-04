@@ -1,8 +1,23 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GameScreen/GameScreen.gd" type="Script" id=1]
 
 [node name="GameScreen" type="Control"]
 margin_right = 1023.0
 margin_bottom = 596.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -29.2692
+margin_top = 309.466
+margin_right = 36.7308
+margin_bottom = 323.466
+text = "Test Score"
 __meta__ = {
 "_edit_use_anchors_": false
 }

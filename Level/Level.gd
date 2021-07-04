@@ -14,6 +14,12 @@ func car_spawn(start_pos):
 	var timer_node_name = "CarTimers/Timer" + str(start_pos)
 	get_node(timer_node_name).wait_time = rand_range(1.6,2.2)
 
+func _process(delta):
+	if $"YSort/Player".position.y <= -250:
+		Global.score += 1
+		$"YSort/Player".position = $"PlayerStartPos".position
+	$"CanvasLayer/Label".text = 'Score: ' + str(Global.score)
+
 func _on_Timer_timeout(): car_spawn(1)
 func _on_Timer2_timeout(): car_spawn(2)
 func _on_Timer3_timeout(): car_spawn(3)
